@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: edu.brown.cs.student.main.TrieTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.15 s <<< FAILURE! - in edu.brown.cs.student.main.TrieTest
+testWhitespace(edu.brown.cs.student.main.TrieTest)  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<1>
+	at edu.brown.cs.student.main.TrieTest.testWhitespace(TrieTest.java:105)
+
+testLedDistance(edu.brown.cs.student.main.TrieTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<2>
+	at edu.brown.cs.student.main.TrieTest.testLedDistance(TrieTest.java:125)
+
+testHasWord(edu.brown.cs.student.main.TrieTest)  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError
+	at edu.brown.cs.student.main.TrieTest.testHasWord(TrieTest.java:71)
+
