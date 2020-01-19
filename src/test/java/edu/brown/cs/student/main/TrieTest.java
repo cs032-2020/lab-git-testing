@@ -22,13 +22,13 @@ public class TrieTest {
     _trie = new Trie();
     List<String> words = new ArrayList<String>();
     words.add("car");
-    words.add("car ride");
+    words.add("ride");
     words.add("card");
     words.add("carpool");
     words.add("dig");
     words.add("dive");
     words.add("drive");
-    words.add("drive way");
+    words.add("way");
     words.add("big");
     words.add("bite");
     _trie.insertAll(words);
@@ -82,7 +82,7 @@ public class TrieTest {
   public void testAllWithPrefix() {
     setUp();
     Set<String> wordsWithPref = _trie.findAllWithPrefix("ca", "ca");
-    assertEquals(wordsWithPref.size(), 4);
+    assertEquals(wordsWithPref.size(), 3);
     assertTrue(wordsWithPref.contains("car"));
     assertTrue(wordsWithPref.contains("card"));
     assertTrue(wordsWithPref.contains("carpool"));
@@ -102,9 +102,9 @@ public class TrieTest {
   public void testWhitespace() {
     setUp();
     Set<String> wordsWithSpace = _trie.whiteSpace("carride");
-    assertEquals(wordsWithSpace.size(), 1);
+    assertEquals(wordsWithSpace.size(), 0);
     assertTrue(wordsWithSpace.contains("car ride"));
-    assertTrue(wordsWithSpace.contains("drive way"));
+    assertFalse(wordsWithSpace.contains("drive way"));
     Set<String> wordsWithSpace2 = _trie.whiteSpace("driveway");
     assertEquals(wordsWithSpace2.size(), 1);
     assertTrue(wordsWithSpace2.contains("drive way"));
@@ -138,7 +138,7 @@ public class TrieTest {
   public void testLed() {
     setUp();
     Set<String> wordsWithinLed = _trie.findLedWithinRoot("cat", 2);
-    assertEquals(wordsWithinLed.size(), 2);
+    assertEquals(wordsWithinLed.size(), 3);
     assertTrue(wordsWithinLed.contains("card"));
     assertTrue(wordsWithinLed.contains("car"));
     Set<String> wordsWithinLed2 = _trie.findLedWithinRoot("dig", 2);
